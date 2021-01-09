@@ -1,0 +1,75 @@
+<html>
+<head>
+<title>Mental Disorder Detection System</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/Style.css') }}">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+</head>
+
+<body>
+<section id="nav-bar">
+ <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+   <div class="container-fluid" id="homee">
+     <a class="nav-link" href="{{ url_for('Homepage') }}" style="color:white;">Back To Home <span
+                            class=" sr-only">(current)</span></a>
+	<!-- <img src="Images/Logo.png"> -->
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
+        <i class="fa fa-bars"></i>
+     </button>
+     <div class="collapse navbar-collapse" id="navbarNav">
+       <ul class="navbar-nav ml-auto">
+         <li class="nav-item">
+             <a class="navbar-brand" href="#top"><img src="{{url_for('static',filename = 'Logo.png')}}"></a>
+
+         </li>
+
+       </ul>
+     </div>
+   </div>
+ </nav>
+</section>
+
+<!----Banner  Section---->
+
+<section id="Overview">
+<div class="container">
+<h1 class="title text-center">OBSESSIVE-COMPULSIVE DISORDER(OCD)</h1>
+<div class="row">
+<div class="col-md-6 about-us">
+<p class="mini-title">Overview</p>
+<p class="description">Obsessive-Compulsive Disorder (OCD) is a common, chronic, and long-lasting disorder in which a person has uncontrollable, reoccurring thoughts (obsessions) and/or behaviors (compulsions) that he or she feels the urge to repeat over and over.</p>
+</div>
+<div class="col-md-6 text-center">
+<img src="{{url_for('static',filename = 'OCD.png')}}" class="img-fluid">
+</div>
+</div>
+</div>
+</section>
+
+<section id="Symptoms">
+<div class="container">
+<div class="row">
+<div class="col about-us">
+<p class="mini-title">Signs and Symptoms</p>
+<p class="description">People with OCD may have symptoms of obsessions, compulsions, or both. These symptoms can interfere with all aspects of life, such as work, school, and personal relationships. Obsessions are repeated thoughts, urges, or mental images that cause anxiety. Compulsions are repetitive behaviors that a person with OCD feels the urge to do in response to an obsessive thought.</p>
+</div>
+</div>
+</div>
+</section>
+
+<section id="Treatments">
+<div class="container">
+<div class="row">
+<div class="col about-us">
+<p class="mini-title">Treatments and Therapies</p>
+<p class="description">OCD is typically treated with medication, psychotherapy, or a combination of the two. Although most patients with OCD respond to treatment, some patients continue to experience symptoms. Sometimes people with OCD also have other mental disorders, such as anxiety, depression, and body dysmorphic disorder, a disorder in which someone mistakenly believes that a part of their body is abnormal. It is important to consider these other disorders when making decisions about treatment.</p>
+</div>
+</div>
+</div>
+</section>
+
+</body>
+
+</html>

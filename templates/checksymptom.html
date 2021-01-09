@@ -1,0 +1,228 @@
+{% extends "layout.html" %} {% block contents %}
+<style>
+        @media only screen and (min-device-width:320px) and (max-device-width:480px) {
+        .ele {
+            width: 100%;
+        }
+        .x {
+            margin-left: 34%;
+            color: #000;
+        }
+        .y {
+            margin-left: 38.5%;
+            color: #000;
+        }
+        .z {
+            margin-left: 23%;
+        }
+        .a {
+            margin-left: 27%;
+        }
+        .b {
+            margin-left: 33%;
+        }
+        .c {
+            margin-left: 28%;
+        }
+        .d {
+            margin-left: 32%;
+        }
+        .e {
+            margin-left: 2%;
+        }
+</style>
+<br>
+<form class="container" action="{{ url_for('Disease') }}" method="POST">
+
+    <div class="form-group">
+        <label class="font-weight-bold" style="color:white;">1. Do you have any possible delusion or unpleasant thoughts? :</label>
+        <select class="form-control custom-select" id="unplesant_thought" name="unplesant_thought" required>
+            <option value=""></option>
+            <option value="bloody_stools">Yes</option>
+            <option value="0">No</option>
+        </select>
+    </div>
+    <br>
+
+    <div class="form-group">
+        <label class="font-weight-bold" style="color:white;">2. Difficulty focusing on task? :</label>
+        <select class="form-control custom-select" id="difficult_focus" name="difficult_focus" required>
+            <option value=""></option>
+            <option value="fecal_leakage">Yes</option>
+            <option value="0">No</option>
+        </select>
+    </div>
+    <br>
+
+    <div class="form-group">
+        <label class="font-weight-bold" style="color:white;">3. Feeling lethargic or low energy? : </label>
+        <select class="form-control custom-select" id="lethargic" name="lethargic" required>
+            <option value=""></option>
+            <option value="swelling">Yes</option>
+            <option value="0">No</option>
+        </select>
+    </div>
+     <div class="form-group">
+        <label class="font-weight-bold" style="color:white;">4. Do you feel like you sleep more than usual? : </label>
+        <select class="form-control custom-select" id="oversleeping" name="oversleeping" required>
+            <option value=""></option>
+            <option value="dizziness">Yes</option>
+            <option value="0">No</option>
+        </select>
+    </div>
+     <div class="form-group">
+        <label class="font-weight-bold" style="color:white;">5. Do you always put your self down? (low-self esteem) : </label>
+        <select class="form-control custom-select" id="self_critical" name="self_critical" required>
+            <option value=""></option>
+            <option value="confusion">Yes</option>
+            <option value="0">No</option>
+        </select>
+    </div>
+     <div class="form-group">
+        <label class="font-weight-bold" style="color:white;">6. Do you feel sad all the time( more than 2 weeks)? :</label>
+        <select class="form-control custom-select" id="persistent_sadness" name="persistent_sadness" required>
+            <option value=""></option>
+            <option value="fatigue">Yes</option>
+            <option value="0">No</option>
+        </select>
+    </div>
+     <div class="form-group">
+        <label class="font-weight-bold" style="color:white;">7.Have you ever perform an act that harms you intentionally? :</label>
+        <select class="form-control custom-select" id="self_harm" name="self_harm" required>
+            <option value=""></option>
+            <option value="itching">Yes</option>
+            <option value="0">No</option>
+        </select>
+    </div>
+     <div class="form-group">
+        <label class="font-weight-bold" style="color:white;">8. Do you feel like your heart is racing more than usual? :</label>
+        <select class="form-control custom-select" id="pouding_heart" name="pouding_heart" required>
+            <option value=""></option>
+            <option value="vomiting">Yes</option>
+            <option value="0">No</option>
+        </select>
+    </div>
+     <div class="form-group">
+        <label class="font-weight-bold" style="color:white;">9. Do you have a shaking hand when you are feeling anxious?:</label>
+        <select class="form-control custom-select" id="shakey_hand" name="shakey_hand" required>
+            <option value=""></option>
+            <option value="arm_pain">Yes</option>
+            <option value="0">No</option>
+        </select>
+    </div>
+     <div class="form-group">
+        <label class="font-weight-bold" style="color:white;">10. Do you feel like you can't breathe sometimes?: :</label>
+        <select class="form-control custom-select" id="short_breath" name="short_breath" required>
+            <option value=""></option>
+            <option value="cough">Yes</option>
+            <option value="0">No</option>
+        </select>
+    </div>
+     <div class="form-group">
+        <label class="font-weight-bold" style="color:white;">11. Do you feel any pain or pressure in your chest?: </label>
+        <select class="form-control custom-select" id="chest_pain" name="chest_pain" required>
+            <option value=""></option>
+            <option value="muscle_pain">Yes</option>
+            <option value="0">No</option>
+        </select>
+    </div>
+     <div class="form-group">
+        <label class="font-weight-bold" style="color:white;">12. Do you have any stomach issue that is unexplainable? (e.g nausea) : </label>
+        <select class="form-control custom-select" id="stomach_issue" name="stomach_issue" required>
+            <option value=""></option>
+            <option value="depression">Yes</option>
+            <option value="0">No</option>
+        </select>
+    </div>
+
+       <div class="form-group">
+        <label class="font-weight-bold" style="color:white;">13. Do you felt the need to be in total control? : </label>
+        <select class="form-control custom-select" id="fear_lose_control" name="fear_lose_control" required>
+            <option value=""></option>
+            <option value="fever">Yes</option>
+            <option value="0">No</option>
+        </select>
+    </div>
+       <div class="form-group">
+        <label class="font-weight-bold" style="color:white;">14. Do you find yourself being heavily conscious of your weight ? : </label>
+        <select class="form-control custom-select" id="weight_guilt" name="weight_guilt" required>
+            <option value=""></option>
+            <option value="painful_bowel_moments">Yes</option>
+            <option value="0">No</option>
+        </select>
+    </div>
+       <div class="form-group">
+        <label class="font-weight-bold" style="color:white;">16. Do you constantly seek reassurance from your loved ones?: </label>
+        <select class="form-control custom-select" id="reassure" name="reassure" required>
+            <option value=""></option>
+            <option value="urine_blood">Yes</option>
+            <option value="0">No</option>
+        </select>
+    </div>
+       <div class="form-group">
+        <label class="font-weight-bold" style="color:white;">17. Do you avoid eating more so than regular ?: : </label>
+        <select class="form-control custom-select" id="avoid_eat" name="avoid_eat" required>
+            <option value=""></option>
+            <option value="nausea">Yes</option>
+            <option value="0">No</option>
+        </select>
+    </div>
+       <div class="form-group">
+        <label class="font-weight-bold" style="color:white;">18. Do you binge-eat more so than usual ? : </label>
+        <select class="form-control custom-select" id="binge_eat" name="binge_eat" required>
+            <option value=""></option>
+            <option value="stiff_neck">Yes</option>
+            <option value="0">No</option>
+        </select>
+    </div>
+    </div>
+       <div class="form-group">
+        <label class="font-weight-bold" style="color:white;">19. Do you intentionally or not vomit after you ate ? : </label>
+        <select class="form-control custom-select" id="self_vomit" name="self_vomit" required>
+            <option value=""></option>
+            <option value="decreased_appetite">Yes</option>
+            <option value="0">No</option>
+        </select>
+    </div>
+    </div>
+       <div class="form-group">
+        <label class="font-weight-bold" style="color:white;">20. Have you ever consumed any alcohol or any drug substances more so than usual ? : </label>
+        <select class="form-control custom-select" id="consumed_sub" name="consumed_sub" required>
+            <option value=""></option>
+            <option value="weak">Yes</option>
+            <option value="0">No</option>
+        </select>
+    </div>
+    </div>
+       <div class="form-group">
+        <label class="font-weight-bold" style="color:white;">21. Do you spent most of your time trying to obtain any drug substances?: : </label>
+        <select class="form-control custom-select" id="time_sub" name="time_sub" required>
+            <option value=""></option>
+            <option value="wheezing">Yes</option>
+            <option value="0">No</option>
+        </select>
+    </div>
+    </div>
+       <div class="form-group">
+        <label class="font-weight-bold" style="color:white;">22. Do you continue to used eventhough it negatively effect your relationship with your loved one ? : </label>
+        <select class="form-control custom-select" id="neg_rshp" name="neg_rshp" required>
+            <option value=""></option>
+            <option value="bleeding">Yes</option>
+            <option value="0">No</option>
+        </select>
+    </div>
+    </div>
+       <div class="form-group">
+        <label class="font-weight-bold" style="color:white;">23. Do you find yourself craving for drug substances more so than usual ?  : </label>
+        <select class="form-control custom-select" id="crave_drug" name="crave_drug" required>
+            <option value=""></option>
+            <option value="crave_drug">Yes</option>
+            <option value="0">No</option>
+        </select>
+    </div>
+    <br><br>
+    <div class="form-actions">
+        <button type="submit" class="btn btn-primary btn-lg" type="submit">Submit</button>
+    </div>
+</form>
+{% endblock contents %}

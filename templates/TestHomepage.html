@@ -1,0 +1,188 @@
+<html>
+<head>
+<title>Mental Disorder Detection System</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/Style.css') }}">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+</head>
+
+<body>
+<section id="nav-bar">
+ <nav class="navbar navbar-expand-lg navbar-dark bg-dark"> 
+   <div class="container-fluid"> 
+    <a class="navbar-brand" href="#top"><img src="static/Logo.png"></a>
+	<!-- <img src="Images/Logo.png"> -->
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
+        <i class="fa fa-bars"></i>
+     </button> 
+     <div class="collapse navbar-collapse" id="navbarNav"> 
+       <ul class="navbar-nav ml-auto"> 
+         <li class="nav-item"> 
+            <a class="nav-link" href="{{ url_for('Homepage') }}">Home <span
+                            class=" sr-only">(current)</span></a>
+         </li> 
+
+         <li class="nav-item"> 
+           <a class="nav-link" href="#crew">About Us</a>
+         </li> 
+         <li class="nav-item"> 
+           <a class="nav-link" href="#footer">Contact</a>
+         </li> 
+       </ul> 
+     </div> 
+   </div> 
+ </nav> 
+</section>
+
+<!----Banner  Section---->
+
+<section id="banner">
+<div class= "container">
+<div class="row">
+<div class="col-md-6">
+<p class= "promo-title">There Is Always a Better Way</p>
+<p>
+Create a life that looks good on the inside,
+not one that just looks good on the outside</p>
+ <a href="{{ url_for('Disease') }}" class="btn btn-primary btn-lg">Start Now</a>
+</div>
+<div class="col-md-6 text-center">
+<img src="static/Home.png" class="img-fluid">
+</div>
+</div>
+</div>
+	<!-- <img src="Images/Wave_1.png" class="bottom-img"> -->
+</section>
+
+<!----Explore Section---->
+
+<section id="explore">
+<div class= "container text-center">
+<h1 class="title">Welcome to Mental Disorder Detection System</h1>
+<div class="row text-center">
+
+
+<div class="col-md-4 explore">
+
+<img src="static/Explore_1.png" class="explore-img">
+<h4>Depression</h4>
+<p> Depression is a state of low mood and aversion to activity that can affect a person's thoughts,
+	behavior,
+	tendencies, feelings, and sense of well-being.</p>
+</div>
+<div class="col-md-4 explore">
+<img src="static/Explore_2.png" class="explore-img">
+<h4>Anxiety</h4>
+<p> Anxiety is an emotion characterized by an unpleasant state of inner turmoil,
+	often accompanied by nervous behaviour such as pacing back and forth,
+	somatic complaints,</p>
+</div>
+<div class="col-md-4 explore">
+<img src="static/Explore_3.png" class="explore-img">
+<h4>OCD Disorder</h4>
+<p> Obsessive–compulsive disorder (OCD) is a mental disorder where people feel the need to check things repeatedly,
+	perform certain routines repeatedly (called "rituals")</p>
+</div>
+</div>
+	<!-- <button type="button" class="btn btn-primary">All Disorders</button> -->
+	<a href="{{ url_for('Disease') }}"><button type="button" class="btn btn-primary">Check now</button></a>
+</div>
+</section>
+
+<!----About Us---->
+
+<section id="about-us">
+<div class="container">
+<h1 class="title text-center">WHY CHOOSE US ?</h1>
+<div class="row">
+<div class="col-md-6 about-us">
+<p class="about-title">We are different</p>
+	<p> Top level physiotherapy professional,
+Evidenced based treatment. We diagnose the cause and provide you with
+the best possible treatment.
+Completely free services just answer our questionnaire
+and we will tell you about your medicine.</p>
+</div>
+<div class="col-md-6">
+<!--<img src="static/Network.png" class="img-fluid">-->
+</div>
+</div>
+</div>
+</section>
+
+<!----Crew Section---->
+
+<section id="crew">
+<div class="container">
+<h1 class="title text-center">MEET THE CREW</h1>
+<div class="row">
+<div class="col crew">
+	<img src="static/Aesha.jpg">
+	<p><b>Aesha</b><br> Leader of THE TECH CRUSADERS </p>
+	<p> Programmer - A182550</p>
+</div>
+<div class="col crew">
+	<img src="static/Fiza.jpg">
+	<p><b>Shahira</b><br> Member of THE TECH CRUSADERS </p>
+	<p> Knowledge Engineer - A182569</p>
+</div>
+<div class="col crew">
+	<img src="static/Natra.jpg">
+	<p><b>Natrah</b><br> Member of THE TECH CRUSADERS </p>
+	<p> Knowledge Engineer -A178271 </p>
+</div>
+</div>
+<div class="row offset-2">
+<div class="col crew">
+	<img src="static/Thivya.jpg">
+	<p><b>Thivya</b><br> Member of THE TECH CRUSADERS </p>
+	<p> Knowledge Engineer - A182525</p>
+</div>
+<div class="col crew">
+	<img src="static/Dave.jpg">
+	<p><b>Dave</b><br> Member of THE TECH CRUSADERS </p>
+	<p> Designer/Programmer - A179158</p>
+</div>
+</div>
+</div>
+</section>
+
+<!----Footer Section---->
+
+<section id="footer">
+<!-- <img class="Images/Wave_2.png" class="footer-img"> -->
+<div class="container">
+<div class="row">
+<div class="col-md-4 footer-box">
+<img src="static/Logo.png">
+<p>Why we're different</p>
+</div>
+<div class="col-md-4 footer-box">
+	<p><b>CONTACT US</b></p>
+	<i class="fa fa-map-marker"></i> FTSM, Universiti Kebangsaan Malaysia </p>
+	<i class="fa fa-phone"></i> +6 03 - 1234 5678 </p>
+	<i class="fa fa-envelope-o"></i> MDDS@gmail.com </p>
+</div>
+<div class="col-md-4 footer-box">
+	<p><b>SUBSCRIBE NEWSLETTER</b></p>
+	<input type="email" class="form-control" placeholder="Your Email">
+	<button type="button" class="btn btn-primary">Subscribe</button>
+</div>
+</div>
+	<hr>
+	<p class="copyright">Website by THE TECH CRUSADERS </p>
+</div>
+</section>
+
+<!----Smooth Scroll---->
+
+
+<script type=text/javascript src="{{
+  url_for('static', filename='js/smooth-scroll.js') }}"></script>
+<script>var scroll = new SmoothScroll('a[href*="#"]');</script>
+
+</body>
+
+</html>

@@ -1,0 +1,48 @@
+{% extends "layout.html" %} {% block contents %}
+
+<!----Banner  Section---->
+
+<section id="Overview">
+<div class="container">
+<h1 class="title text-center" style="color:white;">EATING DISORDER</h1>
+<div class="row">
+<div class="col-md-6 about-us">
+<p class="mini-title" style="color:white;">Overview</p>
+<p class="description" style="color:white;">There is a commonly held misconception that eating disorders are a lifestyle choice. Eating disorders are actually serious and often fatal illnesses that are associated with severe disturbances in people’s eating behaviors and related thoughts and emotions. Preoccupation with food, body weight, and shape may also signal an eating disorder. Common eating disorders include anorexia nervosa, bulimia nervosa, and binge-eating disorder.</p>
+</div>
+<div class="col-md-6 text-center">
+<img src="{{url_for('static',filename = 'EATING DISORDER.png')}}" class="img-fluid">
+</div>
+</div>
+</div>
+</section>
+
+<section id="Symptoms">
+<div class="container">
+<div class="row">
+<div class="col about-us">
+<p class="mini-title" style="color:white;">Signs and Symptoms</p>
+<p class="description" style="color:white;">People with anorexia nervosa may see themselves as overweight, even when they are dangerously underweight. People with anorexia nervosa typically weigh themselves repeatedly, severely restrict the amount of food they eat, often exercise excessively, and/or may force themselves to vomit or use laxatives to lose weight. Anorexia nervosa has the highest mortality rate of any mental disorder. While many people with this disorder die from complications associated with starvation, others die of suicide.</p>
+	<ul>
+	<li style="color:white;">Extremely restricted eating</li>
+	<li style="color:white;">Extreme thinness (emaciation)</li>
+	<li style="color:white;">A relentless pursuit of thinness and unwillingness to maintain a normal or healthy weight</li>
+	<li style="color:white;">Intense fear of gaining weight</li>
+	<li style="color:white;">Distorted body image, a self-esteem that is heavily influenced by perceptions of body weight and shape, or a denial of the seriousness of low body weight</li>
+	</ul>
+</div>
+</div>
+</div>
+</section>
+
+<section id="Treatments">
+<div class="container">
+<div class="row">
+<div class="col about-us">
+<p class="mini-title" style="color:white;">Treatments and Therapies</p>
+<p class="description" style="color:white;">It is important to seek treatment early for eating disorders. People with eating disorders are at higher risk for suicide and medical complications. People with eating disorders can often have other mental disorders (such as depression or anxiety) or problems with substance use. Complete recovery is possible. Psychotherapies such as a family-based therapy called the Maudsley approach, where parents of adolescents with anorexia nervosa assume responsibility for feeding their child, appear to be very effective in helping people gain weight and improve eating habits and moods. To reduce or eliminate binge-eating and purging behaviors, people may undergo cognitive behavioral therapy (CBT), which is another type of psychotherapy that helps a person learn how to identify distorted or unhelpful thinking patterns and recognize and change inaccurate beliefs.</p>
+</div>
+</div>
+</div>
+</section>
+{% endblock contents %}

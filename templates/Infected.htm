@@ -1,0 +1,50 @@
+{% extends "layout.html" %} {% block contents %}
+
+
+    <style>
+        .form-actions {
+            margin: 0;
+            background-color: transparent;
+            text-align: center;
+        }
+        .card{
+            margin:auto;
+            width: 400px;
+            height: 400px;
+            border: 1px solid red;
+             box-sizing: border-box;
+        }
+    </style>
+
+<body>
+
+   <br>
+   <br>
+
+    <div class="card">
+        <br>
+        <h5 class=" text-center text-danger font-weight-bold">Diagnosis :</h5>
+        <div class="card-body">
+            <p class="card-text text-center">Thank you for completting our questionnaire, from the survey it looks you are probably suffering from</p>
+            <h5 class="card-title text-danger text-center">{{ disease }}</h5>
+            <p class="card-text text-center"> We recommend you to follow our therapy instructions by clicking in the following link to get your case better
+                Do you want to know more regarding {{ disease }} ?</p>
+            <br>
+
+             <div class="form-actions">
+                <a href="{{ url_for('disorder', prediction=disease)}}" class="btn btn-danger">Read further</a>
+            </div>
+            <br>
+
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
+    </script>
+</body>
+
+{% endblock contents %}
